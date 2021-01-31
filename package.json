@@ -1,6 +1,6 @@
 {
   "name": "next-auth-zeplin-provider",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": "Zeplin provider for Next Auth",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,11 @@
     "release": "np --branch=main",
     "prerelease": "npm run build"
   },
-  "keywords": ["next", "next-auth", "zeplin"],
+  "keywords": [
+    "next",
+    "next-auth",
+    "zeplin"
+  ],
   "author": "kizilirmak.mert",
   "license": "ISC",
   "devDependencies": {
