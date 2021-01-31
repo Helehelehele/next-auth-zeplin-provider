@@ -1,6 +1,6 @@
 {
   "name": "next-auth-zeplin-provider",
-  "version": "0.1.1-0",
+  "version": "0.1.1-1",
   "description": "Zeplin provider for Next Auth",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "clean": "rm -rf dist",
     "build": "tsc",
     "prebuild": "npm run clean",
-    "release": "np --branch=main",
+    "release": "np --branch=main --no-2fa",
     "prerelease": "npm run build"
   },
   "keywords": [
