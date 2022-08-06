@@ -15,10 +15,16 @@ export default function Zeplin<P extends ZeplinProfile>(
         id: "zeplin",
         name: "Zeplin",
         type: "oauth",
-        version: "2.0",
-        accessTokenUrl: "https://api.zeplin.dev/v1/oauth/token",
-        authorization: { url: "https://api.zeplin.dev/v1/oauth/authorize?response_type=code" },
-        profileUrl: "https://api.zeplin.dev/v1/users/me",
+        client: { token_endpoint_auth_method: "client_secret_post", },
+        authorization: {
+            url: "https://api.zeplin.dev/v1/oauth/authorize",
+            params: {
+                scope: "",
+                response_type: "code",
+            }
+        },
+        token: { url: "https://api.zeplin.dev/v1/oauth/token", },
+        userinfo: { url: "https://api.zeplin.dev/v1/users/me", },
         profile: (profile: ZeplinProfile) => ({
             id: profile.id,
             name: profile.username,
